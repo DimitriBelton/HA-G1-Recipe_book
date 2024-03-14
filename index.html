@@ -1,42 +1,123 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <title>Delicious Recipes</title>
-        <link rel="stylesheet" href="../assets/style/styles.css">
-    </head>
-    <body>
-        <header>
-            <h1>Delicious Recipes</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="../pages/breakfast.html">Frühstück</a></li>
-                    <li><a href="../pages/lunch.html">Mittagessen</a></li>
-                    <li><a href="../pages/dinner.html">Abendessen</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <title>Dimitri, Asaduls und Adrians Rezeptbuch</title>
+    <style>
+        /* Grundlegende Stile */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            line-height: 1.6;
+        }
 
-        <section id="about">
-            <h2>Willkommen bei Delicious Recipes</h2>
-            <p>Entdecken Sie die besten Rezepte der Welt, vom einfachen Abendessen bis zum Wochenendfrühstück.</p>
-            <img src="../assets/images/kitchen.jpg" alt="Küche" width="50%">
-        </section>
+        h1 {
+            text-align: center;
+            color: #5C5C5C;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1em;
+        }
 
-        <article id="featured-recipe">
-            <h2>Empfohlenes Rezept: Pfannkuchen</h2>
-            <p>Knusprige Pfannkuchen, perfekt für ein Wochenendfrühstück.</p>
-            <p><a href="../pages/pancakes_recipe.html">Rezept öffnen.</a></p>
-            <figure>
-                <img src="../assets/images/pancakes.jpg" class="pancake" alt="Pfannkuchen" width="50%">
-                <figcaption>Leckere hausgemachte Pfannkuchen.</figcaption>
-            </figure>
-        </article>
-        
-        <footer>
-            <p>Ein Rezept vorschlagen: <a href="mailto:recipes@recipe-book.com">eine Email schicken.</a> </p>
-        </footer>
-        
-    </body>
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .menu a {
+            color: #5C5C5C;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.5s;
+        }
+
+        .menu a:hover {
+            color: #7F7F7F;
+        }
+
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 50px;
+            flex: 1;
+        }
+
+        .recipes a {
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.1em;
+        }
+
+        .recipes a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fußzeile */
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        /* Responsivität */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipes {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Willkommen zu Dimitri, Asaduls und Adrians Rezeptbuch!</h1>
+    <nav class="menu">
+        <a href="pages/breakfast.html">Frühstück</a>
+        <a href="pages/lunch.html">Mittagessen</a>
+        <a href="pages/dinner.html">Abendessen</a>
+    </nav>
+    <main class="recipes">
+        <a href="pages/apfel-pfannkuchen.html">Apfel Pfannkuchen</a>
+        <a href="pages/haferbrei.html">Haferbrei</a>
+        <a href="pages/joguhrt.html">Joghurt</a>
+        <a href="pages/kaese_krautfleckerl.html">Käse Krautfleckerl</a>
+        <a href="pages/kidney_Bohnen_Buletten.html">Kidney Bohnen Buletten</a>
+        <a href="pages/pancakes_recipe.html">Pancakes</a>
+        <a href="pages/rahmkohl.html">Rahmkohl</a>
+        <a href="pages/ruehrei_recipe.html">Rührei</a>
+        <a href="pages/russische_kohlsuppe.html">Russische Kohlsuppe</a>
+        <a href="pages/tomaten_kartoffel.html">Tomaten Kartoffel</a>
+    </main>
+    <footer>
+        Dimitri, Adrian, Asadu © 2024
+    </footer>
+</body>
 </html>
