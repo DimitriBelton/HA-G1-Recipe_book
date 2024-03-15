@@ -2,122 +2,48 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/style/styles.css">
     <title>Dimitri, Asaduls und Adrians Rezeptbuch</title>
-    <style>
-        /* Grundlegende Stile */
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f8f8f8;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        h1 {
-            text-align: center;
-            color: #5C5C5C;
-            font-size: 2em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 1em;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #ddd;
-            border-radius: 5px;
-        }
-
-        .menu a {
-            color: #5C5C5C;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.5s;
-        }
-
-        .menu a:hover {
-            color: #7F7F7F;
-        }
-
-        .recipes {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 0 50px;
-            flex: 1;
-        }
-
-        .recipes a {
-            display: block;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            border-radius: 5px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            font-size: 1.1em;
-        }
-
-        .recipes a:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Fußzeile */
-        footer {
-            background-color: #f8f8f8;
-            text-align: center;
-            padding: 10px;
-            position: sticky;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        /* Responsivität */
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .recipes {
-                grid-template-columns: 1fr;
-                padding: 0 20px;
-            }
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Externe CSS-Datei -->
+    <link rel="stylesheet" href="assets/style/styles.css">
 </head>
 <body>
-    <h1>Willkommen zu Dimitri, Asaduls und Adrians Rezeptbuch!</h1>
-    <nav class="menu">
-        <a href="pages/breakfast.html">Frühstück</a>
-        <a href="pages/lunch.html">Mittagessen</a>
-        <a href="pages/dinner.html">Abendessen</a>
-    </nav>
-    <main class="recipes">
-        <a href="pages/apfel-pfannkuchen.html">Apfel Pfannkuchen</a>
-        <a href="pages/haferbrei.html">Haferbrei</a>
-        <a href="pages/joguhrt.html">Joghurt</a>
-        <a href="pages/kaese_krautfleckerl.html">Käse Krautfleckerl</a>
-        <a href="pages/kidney_Bohnen_Buletten.html">Kidney Bohnen Buletten</a>
-        <a href="pages/pancakes_recipe.html">Pancakes</a>
-        <a href="pages/rahmkohl.html">Rahmkohl</a>
-        <a href="pages/ruehrei_recipe.html">Rührei</a>
-        <a href="pages/russische_kohlsuppe.html">Russische Kohlsuppe</a>
-        <a href="pages/tomaten_kartoffel.html">Tomaten Kartoffel</a>
-    </main>
-    <footer>
-        Dimitri, Adrian, Asadu © 2024
+    <div class="container">
+        <h1 class="text-center my-4">Willkommen zu Dimitri, Asaduls und Adrians Rezeptbuch!</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="pages/breakfast.html">Frühstück</a>
+                <a class="nav-item nav-link" href="pages/lunch.html">Mittagessen</a>
+                <a class="nav-item nav-link" href="pages/dinner.html">Abendessen</a>
+            </div>
+        </nav>
+        <main class="row my-4">
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/apfel-pfannkuchen.html">Apfel Pfannkuchen</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/haferbrei.html">Haferbrei</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/joguhrt.html">Joghurt</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/kaese_krautfleckerl.html">Käse Krautfleckerl</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/kidney_Bohnen_Buletten.html">Kidney Bohnen Buletten</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/pancakes_recipe.html">Pancakes</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/rahmkohl.html">Rahmkohl</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/ruehrei_recipe.html">Rührei</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/russische_kohlsuppe.html">Russische Kohlsuppe</a></div>
+            <div class="col-md-4 mb-4"><a class="btn btn-light btn-block" href="pages/tomaten_kartoffel.html">Tomaten Kartoffel</a></div>
+        </main>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Dimitri, Adrian, Asadu © 2024</span>
+        </div>
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Externe JavaScript-Dateien -->
+    <script src="java/java1.js"></script>
+    <script src="java/java2.js"></script>
+    <script src="java/java3.js"></script>
 </body>
 </html>
+ff
